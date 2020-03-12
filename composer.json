@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fgh151\\yii2\\s3upload": ""
+            "fgh151\\yii2\\s3upload\\": ""
         }
     }
 }
