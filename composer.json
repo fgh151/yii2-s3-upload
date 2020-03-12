@@ -1,0 +1,22 @@
+{
+    "name": "fgh151/yii2-s3-upload",
+    "description": "Yii2 S3 upload extension",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fedor B Gorsky",
+            "email": "fedor@support-pc.org"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "aws/aws-sdk-php": "^3.133"
+    },
+    "autoload": {
+        "psr-4": {
+            "fgh151\\yii2\\s3upload": ""
+        }
+    }
+}
