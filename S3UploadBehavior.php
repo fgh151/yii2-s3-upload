@@ -32,7 +32,7 @@ class S3UploadBehavior extends Behavior
     public function events()
     {
         return [
-            ActiveRecord::EVENT_AFTER_INSERT => 'upload',
+            ActiveRecord::EVENT_BEFORE_INSERT => 'upload',
             ActiveRecord::EVENT_BEFORE_UPDATE => 'upload'
         ];
     }
