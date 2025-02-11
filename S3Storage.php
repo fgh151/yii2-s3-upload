@@ -20,6 +20,8 @@ class S3Storage extends Component
     /** @var string Bucket name */
     public $bucket = '';
 
+    public $usePathStyleEndpoint = false;
+
     /** @var S3Client */
     public $client;
 
@@ -33,6 +35,7 @@ class S3Storage extends Component
             'region'   => $this->region,
             'endpoint' => $this->endpoint,
             'version'  => $this->version,
+            'use_path_style_endpoint' => $this->usePathStyleEndpoint,
         ];
 
         $sdk = new Sdk($sharedConfig);
