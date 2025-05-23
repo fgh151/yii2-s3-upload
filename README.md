@@ -78,3 +78,19 @@ Form field example:
 ```php
 <?= $form->field($model, 'uploadImage')->fileInput() ?>
 ```
+
+For use with dynamic forms like [yii2-dynamicform](https://github.com/fgh151/yii2-dynamicform), you dont need set behaviour in model function.
+But in controller, when create models, must set:
+
+```php
+$images = Model::createMultiple(StoreImage::class, $images);
+
+foreach ($images as $i => $image) {
+    $image->attachBehavior('upload', [
+        'class' => S3UploadBehavior::class, //Behavior class
+        'attribute' => "[{$i}]file_upload", // Because input name is different
+        'storageAttribute' => 'file', //Entity indefier in mapping clas
+        'path' => 'product', //Entity indefier in mapping clas
+    ]);
+}
+```
